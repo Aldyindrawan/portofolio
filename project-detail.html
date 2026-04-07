@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack Engineering | BookStore Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; overflow-x: hidden; }
+        
+        .bg-glow {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -10%, #1e40af33 0%, transparent 60%);
+            z-index: -1;
+        }
+
+        .glass-panel { 
+            background: rgba(15, 23, 42, 0.7); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+
+        .code-card {
+            background: #0f172a; border-left: 4px solid #3b82f6;
+            font-family: 'Courier New', monospace;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #c084fc 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        .img-box {
+            border-radius: 20px; overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background: #0f172a;
+        }
+
+        .img-box img { width: 100%; transition: transform 0.5s ease; }
+        .img-box:hover img { transform: scale(1.02); }
+
+        .btn-github {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-github:hover {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-1px);
+        }
+
+        /* --- TAMBAHAN STYLE BARU UNTUK TOMBOL GITHUB SAMPING JUDUL --- */
+        .github-inline-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 20px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 14px;
+            color: #a5b4fc;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            vertical-align: middle;
+            margin-left: 25px;
+            position: relative;
+            top: -12px;
+        }
+
+        .github-inline-btn:hover {
+            background: #4f46e5;
+            color: white;
+            border-color: #818cf8;
+            box-shadow: 0 0 30px rgba(79, 70, 229, 0.4);
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        .github-inline-btn i {
+            transition: transform 0.6s ease;
+        }
+
+        .github-inline-btn:hover i {
+            transform: rotate(360deg);
+        }
+
+        .separator {
+            opacity: 0.3;
+            margin: 0 4px;
+        }
+        /* ----------------------------------------------------------- */
+    </style>
+</head>
+<body class="antialiased">
+    <div class="bg-glow"></div>
+
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 py-4 px-8 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="bg-blue-600 p-1.5 rounded-lg"><i data-lucide="layers" class="w-5 h-5 text-white"></i></div>
+            <span class="font-black tracking-tighter text-sm uppercase">Fullstack<span class="text-blue-500">Systems</span></span>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <a href="https://github.com/Aldyindrawan/bookstore-engine-byaldy.git" target="_blank" class="btn-github px-4 py-2 rounded-full text-[10px] font-black tracking-[0.2em] text-white flex items-center gap-2">
+                <i data-lucide="github" class="w-4 h-4 text-blue-400"></i> VIEW REPO
+            </a>
+            
+            <a href="index.html" class="text-[10px] font-bold tracking-[0.2em] hover:text-blue-400 transition flex items-center gap-2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> BACK
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        
+        <header class="mb-32">
+            <div class="flex flex-col items-center text-center">
+                <div class="flex gap-2 mb-6">
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black rounded-full uppercase">Backend: Node.js</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-black rounded-full uppercase">DB: MongoDB</span>
+                </div>
+
+                <div class="inline-block relative">
+                    <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tighter italic inline">
+                        BookStore <span class="gradient-text">Engine.</span>
+                    </h1>
+                    
+                    <a href="https://github.com/Aldyindrawan/bookstore-engine-byaldy.git" target="_blank" class="github-inline-btn group">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                        <span>GITHUB <span class="separator">|</span> VIEW REPO</span>
+                    </a>
+                </div>
+
+                <p class="text-slate-400 max-w-2xl text-lg leading-relaxed mb-12">
+                    Analisis sistem terintegrasi yang menghubungkan **Express.js API** dengan **MongoDB Atlas** untuk pengolahan data buku yang presisi dan aman.
+                </p>
+                <div class="img-box w-full max-w-5xl">
+                    <img src="p1.png" alt="Full System View">
+                </div>
+            </div>
+        </header>
+
+        <section class="grid lg:grid-cols-2 gap-16 mb-40 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-6 tracking-tight">Database & <br><span class="text-blue-500">Logic Flow.</span></h2>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    Sistem ini menggunakan **Architecture Document-Based**. Berbeda dengan database SQL konvensional, MongoDB memungkinkan penyimpanan data buku yang fleksibel dalam format BSON. Penanganan error dan skema data diatur secara ketat melalui **Mongoose ODM**.
+                </p>
+                
+                <div class="code-card p-6 rounded-xl mb-8">
+                    <div class="flex gap-2 mb-4">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <code class="text-xs text-blue-300">
+                        // Backend Endpoint Logic<br>
+                        router.get('/', async (req, res) => {<br>
+                        &nbsp;&nbsp;const books = await Book.find({});<br>
+                        &nbsp;&nbsp;res.status(200).json(books);<br>
+                        });
+                    </code>
+                </div>
+            </div>
+            <div class="img-box bg-slate-900 p-4">
+                <img src="p4.png" alt="MongoDB Structure" class="rounded-lg">
+                <p class="text-center text-[10px] font-black text-slate-500 mt-4 tracking-widest uppercase">Data Mapping: MongoDB Atlas JSON</p>
+            </div>
+        </section>
+
+        <section class="mb-40">
+            <div class="glass-panel p-12 rounded-[40px] border border-white/10">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-16">
+                    <div class="max-w-lg">
+                        <h2 class="text-4xl font-black mb-4">API Operations.</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">Implementasi fungsi **CRUD (Create, Read, Update, Delete)** melalui endpoint RESTful API. Admin memiliki akses penuh untuk memanipulasi database secara aman.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-6 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="text-xs font-bold uppercase tracking-wider">Server Online</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="img-box">
+                            <img src="p5.png" alt="Post Data">
+                        </div>
+                        <h4 class="text-xl font-bold italic">POST /add-book</h4>
+                        <p class="text-slate-400 text-xs italic opacity-70">Source: Github Repository Build v1.0</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="img-box">
+                            <img src="p3.png" alt="Get Data">
+                        </div>
+                        <h4 class="text-xl font-bold italic">GET /all-books</h4>
+                        <p class="text-slate-400 text-xs italic opacity-70">Source: Github Repository Build v1.0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-40 grid lg:grid-cols-3 gap-12 items-center">
+            <div class="lg:col-span-2 img-box">
+                <img src="p6.png" alt="Data Table Sync">
+            </div>
+            <div>
+                <h2 class="text-3xl font-black mb-6">Data <br><span class="text-purple-500">Persistence.</span></h2>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Setiap entri data memiliki **Unique Identifier (_id)**. Tabel ini merepresentasikan hasil akhir dari proses penarikan data (Fetch) yang dilakukan oleh Backend untuk memastikan akurasi stok buku.
+                </p>
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-3 text-xs font-bold"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> NoSQL Validated</div>
+                    <div class="flex items-center gap-3 text-xs font-bold"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Endpoint Secure</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="pt-20 border-t border-white/5 flex flex-col items-center">
+            <div class="relative mb-8">
+                <div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-blue-600 to-purple-600">
+                    <img src="foto.jpg" alt="Aldy Indrawan" class="w-full h-full object-cover rounded-full border-4 border-[#020617]">
+                </div>
+                <div class="absolute -bottom-2 -right-2 bg-blue-600 text-white p-1.5 rounded-lg shadow-xl">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </div>
+            </div>
+            <h3 class="text-2xl font-black mb-1 tracking-tighter">Aldy Indrawan</h3>
+            <p class="text-blue-500 font-bold text-[10px] tracking-[0.4em] uppercase mb-16">Fullstack Developer & Architect</p>
+            
+            <a href="index.html" class="group px-12 py-5 bg-white text-black font-black text-xs tracking-widest rounded-full hover:bg-blue-600 hover:text-white transition-all duration-500 shadow-2xl active:scale-95">
+                RETURN TO SYSTEM
+            </a>
+        </footer>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Fitrialdy Indrawan | Systems Architect & Fullstack Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        :root { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #020617; 
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
+
+        .mesh-gradient {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(147, 51, 234, 0.12) 0px, transparent 50%);
+            z-index: -1;
+        }
+
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.5s ease;
+        }
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-8px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff 40%, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tech-pill {
+            padding: 4px 10px;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 6px;
+            font-size: 9px;
+            font-weight: 800;
+            color: #a5b4fc;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="mesh-gradient"></div>
+
+    <nav class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <div class="font-black text-2xl tracking-tighter">MFI<span class="text-indigo-500">.</span></div>
+        <div class="hidden md:flex gap-10">
+            <a href="#expertise" class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-indigo-400 transition">Expertise</a>
+            <a href="#workflow" class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-indigo-400 transition">Workflow</a>
+            <a href="#projects" class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-indigo-400 transition">Projects</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center px-6 md:px-24 pt-20">
+        <div class="grid md:grid-cols-12 gap-16 items-center">
+            <div class="md:col-span-8 reveal active">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-8 h-[1px] bg-indigo-500"></span>
+                    <span class="text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em]">Available for Collaboration</span>
+                </div>
+                <h1 class="text-6xl md:text-9xl font-extrabold tracking-tighter leading-[0.85] mb-10 text-gradient">
+                    Crafting <br> Digital <span class="italic font-light text-indigo-500">Systems.</span>
+                </h1>
+                <p class="max-w-2xl text-slate-400 text-lg md:text-xl leading-relaxed mb-12 border-l-4 border-indigo-500 pl-8">
+                    Halo, saya <span class="text-white font-semibold">Fitrialdy</span>. Seorang mahasiswa Sistem Informasi yang fokus pada pengembangan <span class="text-indigo-400">Full-stack Ecosystem</span>. Saya mengubah logika bisnis yang kompleks menjadi antarmuka yang elegan dan fungsional.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://github.com/Aldyindrawan" target="_blank" class="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-indigo-500 hover:text-white transition-all text-sm">GITHUB</a>
+                    <a href="mailto:aldyindrawanfx@gmail.com" class="px-8 py-3 border border-white/10 font-bold rounded-full hover:bg-white/5 transition-all text-sm">EMAIL ME</a>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 flex justify-center md:justify-end reveal active">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-[3rem] blur-2xl opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                    <img src="foto.jpg" alt="Muhammad Fitrialdy Indrawan" 
+                         class="relative w-72 h-[450px] object-cover rounded-[2.5rem] border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-32 px-6 md:px-24">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-[10px] font-bold text-indigo-500 tracking-[0.5em] uppercase mb-16 text-center">// Detailed Capabilities</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-[2.5rem] reveal">
+                    <div class="text-indigo-500 mb-6 font-black text-4xl">01</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Frontend Engineering</h3>
+                    <p class="text-slate-500 text-sm mb-8">Fokus pada performa dan aksesibilitas menggunakan framework modern.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">React.js</span><span class="tech-pill">Next.js</span>
+                        <span class="tech-pill">Tailwind CSS</span><span class="tech-pill">Framer Motion</span>
+                    </div>
+                </div>
+                <div class="glass-card p-10 rounded-[2.5rem] reveal delay-100">
+                    <div class="text-purple-500 mb-6 font-black text-4xl">02</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Backend & DevOps</h3>
+                    <p class="text-slate-500 text-sm mb-8">Membangun API yang aman dengan manajemen database yang terukur.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">Node.js</span><span class="tech-pill">Express</span>
+                        <span class="tech-pill">MongoDB</span><span class="tech-pill">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="glass-card p-10 rounded-[2.5rem] reveal delay-200">
+                    <div class="text-emerald-500 mb-6 font-black text-4xl">03</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Workflow Tools</h3>
+                    <p class="text-slate-500 text-sm mb-8">Menjaga standar kualitas kode dan efisiensi pengembangan sistem.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">Git / GitHub</span><span class="tech-pill">Postman API</span>
+                        <span class="tech-pill">Figma</span><span class="tech-pill">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow" class="py-32 px-6 md:px-24 bg-slate-900/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="reveal mb-20">
+                <h2 class="text-4xl font-extrabold text-white tracking-tighter mb-4 italic">How I Build.</h2>
+                <p class="text-slate-400">Proses sistematis untuk memastikan setiap baris kode memberikan nilai nyata.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="reveal">
+                    <h4 class="text-indigo-400 font-bold mb-2 uppercase text-[10px] tracking-widest">Step 01</h4>
+                    <p class="text-white font-bold mb-3">Discovery</p>
+                    <p class="text-slate-500 text-xs leading-relaxed">Menganalisis kebutuhan sistem, target user, dan struktur data yang diperlukan.</p>
+                </div>
+                <div class="reveal delay-100">
+                    <h4 class="text-indigo-400 font-bold mb-2 uppercase text-[10px] tracking-widest">Step 02</h4>
+                    <p class="text-white font-bold mb-3">Architecting</p>
+                    <p class="text-slate-500 text-xs leading-relaxed">Merancang skema database (ERD) dan alur logika API menggunakan Postman.</p>
+                </div>
+                <div class="reveal delay-200">
+                    <h4 class="text-indigo-400 font-bold mb-2 uppercase text-[10px] tracking-widest">Step 03</h4>
+                    <p class="text-white font-bold mb-3">Development</p>
+                    <p class="text-slate-500 text-xs leading-relaxed">Menyusun komponen UI yang responsif dan mengintegrasikannya dengan backend.</p>
+                </div>
+                <div class="reveal delay-300">
+                    <h4 class="text-indigo-400 font-bold mb-2 uppercase text-[10px] tracking-widest">Step 04</h4>
+                    <p class="text-white font-bold mb-3">Deployment</p>
+                    <p class="text-slate-500 text-xs leading-relaxed">Melakukan testing akhir dan merilis aplikasi ke platform cloud.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 md:px-24">
+        <div class="max-w-6xl mx-auto">
+            <div class="reveal mb-16 flex justify-between items-end border-b border-white/5 pb-10">
+                <h2 class="text-4xl font-extrabold text-white">Selected Works</h2>
+                <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Digital Solutions Built with Intention</span>
+            </div>
+
+            <div class="grid gap-12">
+                <div class="glass-card p-12 rounded-[3rem] reveal group grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <div class="flex gap-2 mb-6">
+                            <span class="tech-pill">MERN Stack</span><span class="tech-pill">CRUD</span>
+                        </div>
+                        <h3 class="text-4xl font-bold text-white mb-6">BookStore Engine</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                            Sistem manajemen inventaris buku dengan <span class="text-white">Autentikasi JWT</span> dan dashboard analisis stok real-time.
+                        </p>
+                        <ul class="space-y-2 mb-10 text-xs text-slate-500">
+                            <li><span class="text-indigo-500">#</span> Role: Fullstack Developer</li>
+                            <li><span class="text-indigo-500">#</span> Tech: React, Node, Express, MongoDB</li>
+                        </ul>
+                        <a href="project-detail.html" class="text-white font-black text-xs tracking-widest flex items-center gap-4 group-hover:gap-6 transition-all">
+                            EXPLORE CASE STUDY <span>→</span>
+                        </a>
+                    </div>
+                    <div class="bg-indigo-500/10 rounded-2xl h-64 border border-white/5 flex items-center justify-center italic text-slate-600">
+                        [ Project Preview Image ]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 px-6 border-t border-white/5 text-center">
+        <p class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.4em] mb-6">Let's build the future together</p>
+        <a href="mailto:aldyindrawanfx@gmail.com" class="text-2xl md:text-4xl font-bold text-white hover:text-indigo-400 transition">aldyindrawanfx@gmail.com</a>
+        <div class="flex justify-center gap-8 mt-12">
+            <a href="https://github.com/Aldyindrawan" class="text-xs font-bold text-slate-600 hover:text-white transition uppercase tracking-widest">Github</a>
+            <a href="https://instagram.com/idrwnaldy_" class="text-xs font-bold text-slate-600 hover:text-white transition uppercase tracking-widest">Instagram</a>
+        </div>
+        <p class="mt-20 text-[9px] text-slate-800 uppercase font-black tracking-widest">© 2026 MUHAMMAD FITRIALDY INDRAWAN / UAD SYSTEMS</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
