@@ -1,1 +1,202 @@
-c:\Users\USER\Downloads\p1.png c:\Users\USER\Downloads\p2.png c:\Users\USER\Downloads\p3.png c:\Users\USER\Downloads\p4.png
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UI/UX Case Study | Aldy Indrawan</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+    
+    body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(20px) saturate(180%); background: rgba(17, 25, 40, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .bg-main { background-color: #020617; }
+    .gradient-pink { background: linear-gradient(135deg, #fff 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .glow-pink:hover { box-shadow: 0 0 40px rgba(236, 72, 153, 0.15); border-color: rgba(236, 72, 153, 0.3); }
+  </style>
+</head>
+
+<body class="bg-main text-slate-300">
+
+  <nav class="fixed w-full z-50 glass px-8 py-4 flex justify-between items-center border-b border-white/5">
+    <a href="index.html" class="flex items-center gap-2 text-sm font-semibold hover:text-pink-400 transition">
+      <i data-lucide="chevron-left" class="w-4 h-4"></i> Back to Home
+    </a>
+    <div class="hidden md:block text-[10px] uppercase tracking-[0.2em] font-black text-slate-500">
+      Design System // Case Study v2.0
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-24 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      
+      <section class="mb-20">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-8">
+          <div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 rounded-md bg-pink-500/10 border border-pink-500/20 text-pink-400 text-[10px] font-bold tracking-tighter uppercase">User Experience</span>
+              <span class="px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold tracking-tighter uppercase">Interface Design</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-4 gradient-pink tracking-tighter leading-none">
+              UI/UX <br/> Strategy.
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
+              Membangun jembatan antara kebutuhan bisnis dan kenyamanan pengguna melalui riset mendalam dan desain yang presisi.
+            </p>
+          </div>
+
+          <a href="#" class="glass flex items-center gap-4 px-8 py-4 rounded-2xl border-pink-500/20 hover:bg-pink-500/10 transition duration-300 group">
+            <div class="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-500 group-hover:scale-110 transition">
+              <i data-lucide="figma" class="w-6 h-6"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Prototype</p>
+              <p class="text-sm font-bold text-white leading-tight">Interactive Demo</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-white/5">
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-black mb-2 tracking-widest">Focus</p>
+            <p class="text-white font-medium italic">Human-Centered</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-black mb-2 tracking-widest">Tools</p>
+            <p class="text-white font-medium italic">Figma / FigJam</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-black mb-2 tracking-widest">Deliverable</p>
+            <p class="text-white font-medium italic">High-Fidelity</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-slate-500 uppercase font-black mb-2 tracking-widest">Location</p>
+            <p class="text-white font-medium italic">Indonesia</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="glass rounded-[2rem] overflow-hidden mb-24 border-pink-500/10 shadow-2xl transition hover:scale-[1.01] duration-500">
+        <img src="ss-ux-utama.jpg" alt="UX Main Preview" class="w-full h-auto">
+      </div>
+
+      <section class="mb-32">
+        <div class="flex items-center gap-4 mb-12">
+          <h2 class="text-3xl font-bold text-white italic">The System Architecture</h2>
+          <div class="h-[1px] flex-grow bg-white/10"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass p-8 rounded-[2.5rem] border-white/5 glow-pink transition duration-500">
+            <h3 class="text-sm font-black uppercase text-slate-500 tracking-[0.2em] mb-8">Color Systems</h3>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-[#020617] border border-white/10 shadow-lg"></div>
+                <div class="font-mono text-xs">#020617 <br/><span class="text-slate-500">Primary Dark</span></div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-[#ec4899] shadow-lg"></div>
+                <div class="font-mono text-xs">#EC4899 <br/><span class="text-pink-500 font-bold">Accent Neon</span></div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-[#1e293b] shadow-lg"></div>
+                <div class="font-mono text-xs">#1E293B <br/><span class="text-slate-500">Surface Layer</span></div>
+              </div>
+            </div>
+            <p class="mt-8 text-xs text-slate-500 leading-relaxed italic">
+              Warna dipilih untuk meminimalisir 'eye-strain' namun tetap mempertahankan kontras tinggi untuk tombol aksi utama.
+            </p>
+          </div>
+
+          <div class="glass p-8 rounded-[2.5rem] border-white/5 glow-pink transition duration-500 flex flex-col justify-between">
+            <div>
+                <h3 class="text-sm font-black uppercase text-slate-500 tracking-[0.2em] mb-8">Typography</h3>
+                <p class="text-5xl font-extrabold text-white mb-2 tracking-tighter italic">Aa</p>
+                <p class="text-xl font-bold text-slate-300 mb-6">Plus Jakarta Sans</p>
+            </div>
+            <div class="space-y-1 font-mono text-[10px] text-slate-500 border-t border-white/5 pt-6">
+                <p>Bold: 700 - Titles</p>
+                <p>Medium: 500 - Navigation</p>
+                <p>Regular: 400 - Body Text</p>
+            </div>
+          </div>
+
+          <div class="glass p-8 rounded-[2.5rem] border-white/5 glow-pink transition duration-500">
+            <h3 class="text-sm font-black uppercase text-slate-500 tracking-[0.2em] mb-8">UX Principles</h3>
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <i data-lucide="layout" class="w-5 h-5 text-pink-500"></i>
+                    <p class="text-xs text-slate-400"><strong>Visual Hierarchy:</strong> Mengarahkan mata user ke elemen terpenting.</p>
+                </div>
+                <div class="flex gap-4">
+                    <i data-lucide="zap" class="w-5 h-5 text-yellow-500"></i>
+                    <p class="text-xs text-slate-400"><strong>Consistency:</strong> Komponen yang seragam di seluruh ekosistem.</p>
+                </div>
+                <div class="flex gap-4">
+                    <i data-lucide="mouse-pointer" class="w-5 h-5 text-blue-500"></i>
+                    <p class="text-xs text-slate-400"><strong>Affordance:</strong> Tombol yang terlihat "bisa diklik" secara natural.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-32">
+        <h2 class="text-3xl font-bold text-white mb-12">The Design Journey</h2>
+        <div class="space-y-24">
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="glass rounded-3xl overflow-hidden border-white/5 hover:border-pink-500/20 transition duration-500">
+              <img src="ss-ux-wireframe.jpg" alt="Wireframe" class="w-full opacity-60 hover:opacity-100 transition">
+            </div>
+            <div class="space-y-6">
+              <h3 class="text-3xl font-extrabold text-white">01. Wireframing Phase</h3>
+              <p class="text-slate-400 leading-relaxed text-lg font-light italic">
+                Tahap ini adalah tentang struktur. Saya menyusun 'tulang punggung' aplikasi untuk memastikan alur navigasi terasa logis sebelum masuk ke visual detail.
+              </p>
+              <ul class="text-sm space-y-2 text-slate-500 font-medium uppercase tracking-widest">
+                <li>• Low Fidelity Layout</li>
+                <li>• User Flow Mapping</li>
+                <li>• Content Strategy</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 space-y-6 text-right">
+              <h3 class="text-3xl font-extrabold text-white">02. High-Fidelity Result</h3>
+              <p class="text-slate-400 leading-relaxed text-lg font-light italic">
+                Mentransformasi struktur menjadi antarmuka yang hidup. Menggunakan prinsip atom design untuk memastikan setiap elemen UI bersifat modular dan skalabel.
+              </p>
+              <div class="flex gap-4 justify-end">
+                <div class="glass px-4 py-2 rounded-xl text-[10px] font-bold text-pink-400 tracking-widest border-pink-500/20 uppercase">Prototyping</div>
+                <div class="glass px-4 py-2 rounded-xl text-[10px] font-bold text-blue-400 tracking-widest border-blue-500/20 uppercase">Interaction</div>
+              </div>
+            </div>
+            <div class="glass rounded-3xl overflow-hidden border-white/5 order-1 md:order-2 hover:border-blue-500/20 transition duration-500">
+              <img src="ss-ux-final.jpg" alt="Final Design" class="w-full">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center pt-20 border-t border-white/5">
+        <a href="index.html" class="inline-flex items-center gap-3 px-12 py-5 bg-white text-black font-extrabold rounded-full hover:bg-pink-600 hover:text-white transition duration-500 shadow-2xl">
+          <i data-lucide="arrow-left" class="w-5 h-5"></i> Back to Portfolio
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="py-12 text-center text-slate-700 text-[10px] tracking-[0.4em] font-black uppercase italic">
+    Aldy Indrawan • UI/UX Specialist • 2026
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
