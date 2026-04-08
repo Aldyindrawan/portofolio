@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M. Fitrialdy Indrawan | Systems Architect & Fullstack Dev</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
         :root { scroll-behavior: smooth; }
@@ -55,20 +56,89 @@
             color: #a5b4fc;
             text-transform: uppercase;
         }
+
+        /* TOMBOL EXPLORE STANDOUT */
+        .btn-explore {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 28px;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            border-radius: 12px;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+        }
+
+        .btn-explore:hover {
+            background: #6366f1;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+            transform: translateY(-3px);
+            border-color: transparent;
+        }
+
+        .btn-explore::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+            animation: pulse-indigo 2s infinite;
+        }
+
+        @keyframes pulse-indigo {
+            0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+        }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <div class="mesh-gradient"></div>
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+    <nav class="fixed top-0 w-full z-50 px-6 py-6 md:py-8 flex justify-between items-center backdrop-blur-md border-b border-white/5">
         <div class="font-black text-2xl tracking-tighter">MFI<span class="text-indigo-500">.</span></div>
+        
         <div class="hidden md:flex gap-10">
             <a href="#expertise" class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-indigo-400 transition">Expertise</a>
             <a href="#workflow" class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-indigo-400 transition">Workflow</a>
             <a href="#projects" class="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-indigo-400 transition">Projects</a>
         </div>
+
+        <button id="menu-open" class="md:hidden text-white p-2">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
     </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-950 z-[100] flex flex-col items-center justify-center gap-8 md:hidden">
+        <button id="menu-close" class="absolute top-8 right-8 text-slate-400 hover:text-white transition">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <a href="#expertise" class="mobile-link text-2xl font-black tracking-widest hover:text-indigo-500 transition">EXPERTISE</a>
+        <a href="#workflow" class="mobile-link text-2xl font-black tracking-widest hover:text-indigo-500 transition">WORKFLOW</a>
+        <a href="#projects" class="mobile-link text-2xl font-black tracking-widest hover:text-indigo-500 transition">PROJECTS</a>
+        <div class="mt-10 flex gap-6">
+            <a href="https://github.com/Aldyindrawan" target="_blank"><i data-lucide="github" class="w-6 h-6"></i></a>
+            <a href="mailto:aldyindrawanfx@gmail.com"><i data-lucide="mail" class="w-6 h-6"></i></a>
+        </div>
+    </div>
 
     <section class="min-h-screen flex flex-col justify-center px-6 md:px-24 pt-20">
         <div class="grid md:grid-cols-12 gap-16 items-center">
@@ -186,13 +256,13 @@
                             <li><span class="text-indigo-500">#</span> Role: Fullstack Developer</li>
                             <li><span class="text-indigo-500">#</span> Tech: React, Node, Express, MongoDB</li>
                         </ul>
-                        <a href="project-detail.html" class="text-white font-black text-xs tracking-widest flex items-center gap-4 group-hover:gap-6 transition-all">
-                            EXPLORE CASE STUDY <span>→</span>
+                        <a href="project-detail.html" class="btn-explore group/btn">
+                            <span>Explore Case Study</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1"></i>
                         </a>
                     </div>
                     <div class="bg-indigo-500/10 rounded-2xl border border-white/5 flex items-center justify-center overflow-hidden">
-                        <img src="p3.png" alt="Full System View" class="w-full h-auto object-cover">
-                    </div>
+                        <img src="p3.png" alt="Full System View" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
                     </div>
                 </div>
             </div>
@@ -210,6 +280,10 @@
     </footer>
 
     <script>
+        // Lucide Icons Init
+        lucide.createIcons();
+
+        // Reveal Animation on Scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
@@ -217,6 +291,25 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mobile Menu Logic
+        const menuOpen = document.getElementById('menu-open');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuOpen.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scroll
+        };
+
+        menuClose.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
     </script>
 </body>
 </html>
