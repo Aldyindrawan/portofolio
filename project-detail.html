@@ -112,7 +112,7 @@
                 </div>
 
                 <p class="text-slate-400 max-w-2xl text-sm md:text-lg leading-relaxed mb-12">
-                    Analisis sistem terintegrasi yang menghubungkan **Express.js API** dengan **MongoDB Atlas** untuk pengolahan data buku yang presisi dan aman.
+                    Analisis sistem terintegrasi yang menghubungkan **Express.js API** dengan **MongoDB** melalui **Compass** untuk manajemen data lokal yang presisi.
                 </p>
                 <div class="img-box w-full max-w-5xl">
                     <img src="p1.png" alt="Full System View" class="w-full h-auto">
@@ -124,7 +124,7 @@
             <div class="order-2 lg:order-1">
                 <h2 class="text-3xl md:text-4xl font-black mb-6 tracking-tight">Database & <br><span class="text-blue-500">Logic Flow.</span></h2>
                 <p class="text-slate-400 text-sm md:text-base mb-8 leading-relaxed">
-                    Sistem ini menggunakan **Architecture Document-Based**. Berbeda dengan database SQL konvensional, MongoDB memungkinkan penyimpanan data buku yang fleksibel dalam format BSON. Penanganan error dan skema data diatur secara ketat melalui **Mongoose ODM**.
+                    Sistem ini menggunakan **Architecture Document-Based**. Melalui GUI MongoDB Compass, saya melakukan pemetaan dokumen BSON secara real-time. Validasi skema dilakukan di level aplikasi menggunakan **Mongoose ODM** untuk memastikan tipe data konsisten.
                 </p>
                 
                 <div class="code-card p-4 md:p-6 rounded-xl mb-8 overflow-x-auto">
@@ -144,7 +144,7 @@
             </div>
             <div class="img-box bg-slate-900 p-3 md:p-4 order-1 lg:order-2">
                 <img src="p4.png" alt="MongoDB Structure" class="rounded-lg w-full h-auto">
-                <p class="text-center text-[8px] md:text-[10px] font-black text-slate-500 mt-4 tracking-widest uppercase">Data Mapping: MongoDB Atlas JSON</p>
+                <p class="text-center text-[8px] md:text-[10px] font-black text-slate-500 mt-4 tracking-widest uppercase">Data Mapping: MongoDB Compass Visualizer</p>
             </div>
         </section>
 
@@ -192,6 +192,85 @@
                 <div class="flex flex-col gap-3">
                     <div class="flex items-center gap-3 text-xs font-bold"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> NoSQL Validated</div>
                     <div class="flex items-center gap-3 text-xs font-bold"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Endpoint Secure</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 md:mb-40">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tighter">System <span class="text-blue-500">Demonstration.</span></h2>
+                <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">Visualisasi real-time bagaimana sistem menangani request dari Client hingga ke Database.</p>
+            </div>
+            
+            <div class="img-box max-w-4xl mx-auto bg-black p-1 md:p-2">
+                  <video class="w-full rounded-xl" controls poster="p1.png">
+                      <source src="Recording 2026-04-09 044916.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                  </video>
+            </div>
+
+            <div class="mt-12 grid md:grid-cols-3 gap-8 text-center md:text-left mb-20">
+                <div class="glass-panel p-6 rounded-2xl">
+                    <i data-lucide="zap" class="w-8 h-8 text-yellow-500 mb-4 mx-auto md:mx-0"></i>
+                    <h5 class="font-bold mb-2 uppercase text-xs tracking-widest">Real-time Processing</h5>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">Menampilkan kecepatan eksekusi query MongoDB saat melakukan input data baru secara instan.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl">
+                    <i data-lucide="activity" class="w-8 h-8 text-blue-500 mb-4 mx-auto md:mx-0"></i>
+                    <h5 class="font-bold mb-2 uppercase text-xs tracking-widest">API Flow Trace</h5>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">Demonstrasi alur data dari endpoint POST hingga muncul di interface data table tanpa refresh.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl">
+                    <i data-lucide="database" class="w-8 h-8 text-purple-500 mb-4 mx-auto md:mx-0"></i>
+                    <h5 class="font-bold mb-2 uppercase text-xs tracking-widest">Compass Sync</h5>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">Sinkronisasi data langsung antara instance MongoDB lokal dengan UI Management System.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel p-8 md:p-12 rounded-[32px] border border-blue-500/20 shadow-2xl">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-12 h-1 bg-blue-500 rounded-full"></div>
+                    <h3 class="text-2xl md:text-3xl font-black italic tracking-tight uppercase">Technical <span class="text-blue-500">Deep Dive</span></h3>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-blue-400 font-bold text-sm tracking-widest uppercase mb-3 flex items-center gap-2">
+                                <i data-lucide="lock" class="w-4 h-4"></i> Secure Authentication Logic
+                            </h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Proses login dan signup menggunakan enkripsi pada level backend untuk melindungi data sensitif user. Sistem memastikan setiap sesi valid sebelum mengizinkan modifikasi pada koleksi buku di database.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-purple-400 font-bold text-sm tracking-widest uppercase mb-3 flex items-center gap-2">
+                                <i data-lucide="cpu" class="w-4 h-4"></i> Node.js & Express Middleware
+                            </h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Arsitektur backend memanfaatkan **Middleware** untuk melakukan sanitasi input (body parsing). Setiap request `POST` untuk menambah buku melewati tahap verifikasi struktur data JSON sebelum akhirnya diterima oleh database.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-green-400 font-bold text-sm tracking-widest uppercase mb-3 flex items-center gap-2">
+                                <i data-lucide="layout-template" class="w-4 h-4"></i> MongoDB Compass Debugging
+                            </h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Pemanfaatan **MongoDB Compass** sebagai GUI mempermudah analisis performa index dan pengecekan redundansi data. Ini memastikan interaksi antara *Mongoose model* dan *Local Database* berjalan efisien tanpa *latency*.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-orange-400 font-bold text-sm tracking-widest uppercase mb-3 flex items-center gap-2">
+                                <i data-lucide="refresh-cw" class="w-4 h-4"></i> RESTful API Lifecycle
+                            </h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Sistem ini mengelola *state* data secara asinkron. Saat buku ditambahkan, API mengirimkan status `201 Created` beserta objek buku terbaru, yang kemudian dirender secara instan di tabel tanpa perlu memuat ulang seluruh halaman.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
